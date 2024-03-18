@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Grid</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .custom-img:hover {
+      transform: scale(1.1);
+    }
+
+   
+    .custom-img-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 100%; 
+    }
+
+    .custom-img-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 90%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960" class="img-fluid custom-img" alt="Image 1">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="data:image/jpeg;base64,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" class="img-fluid custom-img" alt="Image 2">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg" class="img-fluid custom-img" alt="Image 3">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjBhaPSmsGJQgIsxUJrkhyNhRcJOgYtLNUBE618UCZAtQCgl-OR52v1sYabnjWQwpEUug&usqp=CAU" class="img-fluid custom-img" alt="Image 4">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2023-toyota-crown-114-1657642178.jpg?crop=1xw:1xh;center,top&resize=980:*" class="img-fluid custom-img" alt="Image 5">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://d3lp4xedbqa8a5.cloudfront.net/s3/digital-cougar-assets/whichcar/2018/09/24/-1/2018-Lamborghini-Huracan-Performante-Spyder-performance-review.jpg" class="img-fluid custom-img" alt="Image 6">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://cdn.motor1.com/images/mgl/JO94P6/s3/most-expensive-cars-in-the-world.jpg" class="img-fluid custom-img" alt="Image 7">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://imgd.aeplcdn.com/600x337/n/cw/ec/153319/range-rover-velar-exterior-right-front-three-quarter-4.jpeg?isig=0&q=80" class="img-fluid custom-img" alt="Image 8">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="custom-img-container">
+        <img src="https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1618602532707-3OAII3QVHYKCW3KJ1HJU/cars_boast.jpg" class="img-fluid custom-img" alt="Image 9">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
