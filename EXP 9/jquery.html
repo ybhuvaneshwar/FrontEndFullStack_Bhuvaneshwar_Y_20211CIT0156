@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="jquery-3.6.3.js"></script>
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#btn1').click(function() {
+                    $('#div1').fadeIn(2000);
+                    $('#div2').fadeIn(4000);
+                    $('#div3').fadeIn(6000);
+                });
+        
+                $('#btn2').click(function() {
+                    $('#div1').fadeOut(2000);
+                    $('#div2').fadeOut(4000);
+                    $('#div3').fadeOut(6000);
+                });
+        
+                $('#btn3').click(function() {
+                    $('#div1').fadeToggle(2000);
+                    $('#div2').fadeToggle(4000);
+                    $('#div3').fadeToggle(6000);
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <p>fade with different parameters.</p>
+        <button id="btn1">fade in </button>
+        <button id="btn2">fade out </button>
+        <button id="btn3">fade toggle</button>
+
+        <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+        <div id="div2" style="width:80px;height:80px;background-color:rgb(27, 35, 116);"></div><br>
+        <div id="div3" style="width:80px;height:80px;background-color:rgb(19, 166, 219);"></div><br>
+    </body>
+</html>
