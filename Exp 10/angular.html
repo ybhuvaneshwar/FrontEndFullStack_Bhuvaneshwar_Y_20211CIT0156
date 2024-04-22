@@ -1,0 +1,20 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <body>
+        <div ng-app>
+            <p>Example Expression : {{10+5}}</p>
+            <div ng-app="myApp" ng-init="firstName='Geo';lastName='Kumar'">
+                <p> The complete name is : {{ firstName + ' ' + lastName }}</p>
+            </div>
+            <div ng-app="myApp" ng-init="quantity=3;cost=100">
+                <p>Total amount in rupees: <span ng-bind="quantity * cost"></span></p>
+            </div>
+            <div ng-app="myApp" ng-init="person={firstName:'Geo',lastName:'kumar'}">
+                <p>The first name is {{person.firstName}}</p>
+            </div>
+            <div ng-app="myApp" ng-init="points=[11,25,12,13,130]">
+                <p>The second result is <span ng-bind="points[1]"></span></p>
+            </div>
+        </div>
+    </body>
+</html>

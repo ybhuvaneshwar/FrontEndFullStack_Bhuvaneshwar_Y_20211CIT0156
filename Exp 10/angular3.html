@@ -1,0 +1,17 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            Name:<input ng-model="Name">
+
+        </div>
+        <script>
+            var app=angular.module('myApp',[]);
+            app.controller('myCtrl',function($scope){
+                $scope.Name='John Doe';
+            });
+
+        </script>
+        <p>Use the ng-model directive to bind the value of the input field to a property made in the controller</p>
+    </body>
+</html>
